@@ -1,4 +1,4 @@
-Computer Vision API Version 1.0
+#Computer Vision API Version 1.0
 
 Computer Vision cloud-based API provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Microsoft Computer Vision algorithms can analyze visual content in different ways based on inputs and user choices. With the Computer Vision API users can analyze images to:
 - Tag images based on content.
@@ -25,13 +25,13 @@ Based on a list of 86 concepts seen in the below diagram, visual features found 
 
 ![Analyze Categories](./analyze_categories.jpg)  
 
-Image                                                  | Response
------------------------------------------------------- | ----------------
-![Woman Roof](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/woman_roof.jpg)                 | people
-![Family Photo](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/family_photo.jpg)             | people_crowd
-![Cute Dog](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/cute_dog.jpg)                     | animal_dog
-![Outdoor Mountain](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/mountain_vista.jpg)       | outdoor_mountain
-![Vision Analyze Food Bread](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/bread.jpg)       | food_bread
+Image                                           | Response
+----------------------------------------------- | ----------------
+![Woman Roof](./woman_roof.jpg)                 | people
+![Family Photo](./family_photo.jpg)             | people_crowd
+![Cute Dog](./cute_dog.jpg)                     | animal_dog
+![Outdoor Mountain](./mountain_vista.jpg)       | outdoor_mountain
+![Vision Analyze Food Bread](./bread.jpg)       | food_bread
 
 ##Identifying Image Types
 There are several ways to categorize images. Computer Vision API can set a boolean flag to indicate whether an image is black and white or color and use the same method to indicate whether an image is a line drawing or not. It can also indicate whether an image is clipart or not and indicate its quality as such on a scale of 0-3. 
@@ -68,7 +68,7 @@ The 21 languages supported by OCR are Chinese Simplified, Chinese Traditional, C
 
 If needed, OCR corrects the rotation of the recognized text, in degrees, around the horizontal image axis. OCR provides the frame coordinates of each word as seen in below illustration.
 
-![OCR Overview](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/vision-overview-ocr.png)
+![OCR Overview](./vision-overview-ocr.png)
 
 Requirements for OCR:
 - The size of the input image must be between 40 x 40 and 32000 x 32000 pixels. 
