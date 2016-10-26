@@ -121,8 +121,7 @@ Returned Json
 [
 {
 "type": "phrase",
-“text”: “a photo of a large city”,
-          “confidence”: 0.577256764264197
+“text”: “a photo of a large city”,          “confidence”: 0.577256764264197
     }
 ]
 "captions": 
@@ -189,4 +188,4 @@ The thumbnail algorithm works as follows:
 2. Crops the image based on identified “region of interest”.
 3. Changes the aspect ratio to fit the target thumbnail dimensions.
 
-![Thumbnails](./thumbnail_demo.jpg) 
+![Thumbnails](./thumbnail-demo.jpg) 
