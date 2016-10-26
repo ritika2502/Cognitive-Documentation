@@ -15,8 +15,54 @@ Computer Vision cloud-based API provides developers with access to advanced algo
 ##Tagging Images
 Computer Vision API returns tags based on more than 2000 recognizable objects, living beings, scenery, and actions. In cases where tags may be ambiguous or not common knowledge, the API response provides “hints” to clarify the meaning of the tag in context of a known setting. Tags are not organized as a taxonomy and no inheritance hierarchies exist. A collection of content tags forms the foundation for an image “description” displayed as human readable language formatted in complete sentences. Note, that at this point English is the only supported language for image description.
 
-Computer Vision API will also support specialized (or domain-specific) information. Specialized information can be implemented as a stand-alone method or in combination with the "analyze" method. Specialized information is a way to break down the 86-category taxonomy into domain-specific models. Right now, we only support celebrity-recognition as a domain-specific model, but more will be added soon! 
- 
+After uploading an image or specifying an image URL, Computer Vision API’s algorithms output a number of tags based on the objects, living beings and actions identified in the image. Tagging is not limited to the main subject, such as a person in the foreground, but also includes the setting (indoor or outdoor), furniture, tools, plants, animals, accessories, gadgets etc. 
+- Supported input methods: Raw image binary in the form of an application/octet stream or image URL.
+- Supported image formats: JPEG, PNG, GIF, BMP.
+- Image file size: Less than 4MB.
+- Image dimension: Greater than 50 x 50 pixels.
+
+###Example
+![House_Yard](./House_Yard.jpg)  
+
+``` 
+Returned Json
+{
+“tags”: [
+          {
+            "name": "grass",
+              "confidence": 0.999999761581421
+          },
+          {
+            "name": "outdoor",
+              "confidence": 0.999970674514771
+          },
+          {
+              "name": "sky",
+                "confidence": 999289751052856
+          },
+          {
+              "name": "building",
+                "confidence": 0.996463239192963
+          },
+          {
+            "name": "house",
+              "confidence": 0.992798030376434
+          },
+          {
+            "name": "lawn",
+              "confidence": 0.822680294513702
+          },
+          {
+            "name": "green",
+              "confidence": 0.641222536563873
+          },
+          {
+            "name": "residential",
+              "confidence": 0.314032256603241
+          },
+        ],
+} 
+``` 
 ##Categorizing Images
 In addition to tagging and descriptions, Computer Vision API returns the taxonomy-based categories defined in previous versions. These categories are organized as a taxonomy with parent/child hereditary hierarchies. All categories are in English.They can be used alone or in combination with our new models.
 
