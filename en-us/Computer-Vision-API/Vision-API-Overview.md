@@ -21,6 +21,7 @@ In addition to tagging and descriptions, Computer Vision API returns the taxonom
 ##Identifying Image Types
 There are several ways to categorize images. Computer Vision API can set a boolean flag to indicate whether an image is black and white or color and use the same method to indicate whether an image is a line drawing or not. It can also indicate whether an image is clipart or not and indicate its quality as such on a scale of 0-3. 
 
+
 ##Recognizing Domain-Specific Content: Celebrities Model
 A new domain-specific model has been added to Computer Vision API, in this case a model that recognizes celebrities in your images. It can be implemented as a stand-alone method or in combination with the top-level image categorization. 
 
@@ -43,7 +44,7 @@ The 21 languages supported by OCR are Chinese Simplified, Chinese Traditional, C
 
 If needed, OCR corrects the rotation of the recognized text, in degrees, around the horizontal image axis. OCR provides the frame coordinates of each word as seen in below illustration.
 
-![OCR Overview](Cognitive-Documentation/en-us/Computer-Vision-API/vision-overview-ocr.png) 
+![OCR Overview](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/vision-overview-ocr.png)
 
 Requirements for OCR:
 - The size of the input image must be between 40 x 40 and 32000 x 32000 pixels. 
