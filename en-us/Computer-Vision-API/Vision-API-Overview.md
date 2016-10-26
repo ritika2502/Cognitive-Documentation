@@ -31,7 +31,7 @@ Computer Vision API’s algorithms analyze the content found in an image, which 
 The Computer Vision algorithm extracts colors from an image. The colors are analyzed in three different contexts, foreground, background, and whole, and colors are grouped into twelve 12 dominant accent colors (black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow). Depending on the colors in an image, simple black and white or accent colors may be returned in hexadecimal color codes.
 
 ##Flagging Adult Content
-Among the various visual categories is the adult and racy group, which enables detection of pornographic materials and restricts the display of images containing sexual content. The filter for adult and racy content detection can be set on a sliding scale to accommodate the user’s preference.
+ Among the various visual categories is the adult and racy group, which enables detection of pornographic materials and restricts the display of images containing sexual content. The filter for adult and racy content detection can be set on a sliding scale to accommodate the user’s preference.
 
 ##Detecting Faces
 Computer Vision API detects human faces within a picture and generates face coordinates, draws the bounding box around the face, indicates gender and age. These visual features are a subset of metadata generated for Face API. For more extensive metadata generated for faces, such as facial identification, pose detection, and more, use the Face API.
@@ -42,22 +42,23 @@ OCR technology detects text content in an image and subsequently extracts the id
 The 21 languages supported by OCR are Chinese Simplified, Chinese Traditional, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, and Turkish. 
 
 If needed, OCR corrects the rotation of the recognized text, in degrees, around the horizontal image axis. OCR provides the frame coordinates of each word as seen in below illustration.
+
 ![OCR Overview](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/vision-overview-ocr.png)
 
 Requirements for OCR:
--The size of the input image must be between 40 x 40 and 32000 x 32000 pixels. 
--The image cannot be bigger than 100 megapixels.
+- The size of the input image must be between 40 x 40 and 32000 x 32000 pixels. 
+- The image cannot be bigger than 100 megapixels.
 
 Input image can be rotated by any multiple of 90 degrees plus a small angle of up to ±40 degrees.
 
 The accuracy of text recognition depends on the quality of the image. An inaccurate reading may be caused by the following: 
--Blurry images
--Handwritten or cursive text
--Artistic font styles
--Small text size
--Complex backgrounds, shadows or glare over text or perspective distortion
--Oversized or missing capital letters at the beginnings of words
--Subscript, superscript, or strikethrough text
+- Blurry images
+- Handwritten or cursive text
+- Artistic font styles
+- Small text size
+- Complex backgrounds, shadows or glare over text or perspective distortion
+- Oversized or missing capital letters at the beginnings of words
+- Subscript, superscript, or strikethrough text
 
 Limitations: On photos where text is dominant, false positives may come from partially recognized words. On some photos, especially photos without any text, precision can vary a lot depending on the type of image.
 
