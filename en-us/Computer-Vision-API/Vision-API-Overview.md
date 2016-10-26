@@ -38,7 +38,9 @@ Among the various visual categories is the adult and racy group, which enables d
 ##Detecting faces
 Computer Vision API detects human faces within a picture and generates face coordinates, draws the bounding box around the face, indicates gender and age. These visual features are a subset of metadata generated for Face API. For more extensive metadata generated for faces, such as facial identification, pose detection, and more, use the Face API.
 
-##TBD
+
+
+##Quick Start...
 - Supported input methods: Raw image binary in the form of an application/octet stream or image URL.
 - Supported image formats: JPEG, PNG, GIF, BMP.
 - Image file size: Less than 4MB.
@@ -81,13 +83,3 @@ Returned Json
 ]
 }
 ```
-
-
-
-##Generate a thumbnail
-
-A thumbnail is a small representation of a full-size image. Varied devices such as phones, tablets, and PCs create a need for different user experience (UX) layouts and thumbnail sizes. Using smart cropping, this Computer Vision API feature helps solve the problem. The algorithm analyzes the objects within the image, then crops it to fit “the region of interest” (ROI). The generated thumbnail can be presented in a different aspect ratio than that of the original image to accommodate a user’s needs. 
-
-##OCR
-
-Optical Character Recognition (OCR) is a technology that detects text content in an image and subsequently extracts the identified text into 
