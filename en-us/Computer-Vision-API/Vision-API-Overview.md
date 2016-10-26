@@ -43,7 +43,7 @@ The 21 languages supported by OCR are Chinese Simplified, Chinese Traditional, C
 
 If needed, OCR corrects the rotation of the recognized text, in degrees, around the horizontal image axis. OCR provides the frame coordinates of each word as seen in below illustration.
 
-![OCR Overview](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/vision-overview-ocr.png)
+![OCR Overview](Cognitive-Documentation/en-us/Computer-Vision-API/vision-overview-ocr.png) 
 
 Requirements for OCR:
 - The size of the input image must be between 40 x 40 and 32000 x 32000 pixels. 
