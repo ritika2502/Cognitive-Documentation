@@ -6,8 +6,7 @@ Computer Vision cloud-based API provides developers with access to advanced algo
 - Identify the type and quality of images. 
 - Recognize domain specific content (celebrities model).
 - Generate descriptions of the content. 
-- Use optical character recognition to identify text found in images.
-- Distinguish color schemes.
+- Use optical character recognition to identify text found in images.- Distinguish color schemes.
 - Flag adult content.- Detect human faces and return their coordinates in the image.   
 - Crop photos to be used as thumbnails. 
 
@@ -16,7 +15,7 @@ Computer Vision API returns tags based on more than 2000 recognizable objects, l
 
 Computer Vision API will also support specialized (or domain-specific) information. Specialized information can be implemented as a stand-alone method or in combination with the "analyze" method. Specialized information is a way to break down the 86-category taxonomy into domain-specific models. Right now, we only support celebrity-recognition as a domain-specific model, but more will be added soon! 
  
-##Categorizing images
+##Categorizing Images
 In addition to tagging and descriptions, Computer Vision API returns the taxonomy-based categories defined in previous versions. These categories are organized as a taxonomy with parent/child hereditary hierarchies. All categories are in English.They can be used alone or in combination with our new models.
 
 ##Identifying Image Types
