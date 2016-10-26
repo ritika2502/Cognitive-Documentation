@@ -188,4 +188,4 @@ The thumbnail algorithm works as follows:
 2. Crops the image based on identified “region of interest”.
 3. Changes the aspect ratio to fit the target thumbnail dimensions.
 
-![Thumbnails](./thumbnail-demo.jpg) 
+![Thumbnails](./thumbnail-demo.png) 
