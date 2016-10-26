@@ -22,15 +22,16 @@ In addition to tagging and descriptions, Computer Vision API returns the taxonom
 
 ###The 86-category concept
 Based on a list of 86 concepts seen in the below diagram, visual features found in an image can be categorized ranging from broad to specific. For the full taxonomy in text format, see [Image Categories](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/86categories). 
+
 ![Analyze Categories](./Images/analyze_categories.jpg)  
 
 Image                                                  | Response
 ------------------------------------------------------ | ----------------
-![Woman Roof](./Images/woman_roof.jpg)                 | people
-![Family Photo](./Images/family_photo.jpg)             | people_crowd
-![Cute Dog](./Images/cute_dog.jpg)                     | animal_dog
-![Outdoor Mountain](./Images/mountain_vista.jpg)       | outdoor_mountain
-![Vision Analyze Food Bread](./Images/bread.jpg)       | food_bread
+![Woman Roof](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/woman_roof.jpg)                 | people
+![Family Photo](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/family_photo.jpg)             | people_crowd
+![Cute Dog](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/cute_dog.jpg)                     | animal_dog
+![Outdoor Mountain](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/mountain_vista.jpg)       | outdoor_mountain
+![Vision Analyze Food Bread](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/bread.jpg)       | food_bread
 
 ##Identifying Image Types
 There are several ways to categorize images. Computer Vision API can set a boolean flag to indicate whether an image is black and white or color and use the same method to indicate whether an image is a line drawing or not. It can also indicate whether an image is clipart or not and indicate its quality as such on a scale of 0-3. 
