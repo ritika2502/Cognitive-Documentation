@@ -1,3 +1,4 @@
+
 #Computer Vision API Version 1.0
 
 Computer Vision cloud-based API provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Microsoft Computer Vision algorithms can analyze visual content in different ways based on inputs and user choices. With the Computer Vision API users can analyze images to:
@@ -20,7 +21,10 @@ Computer Vision API will also support specialized (or domain-specific) informati
 ##Categorizing Images
 In addition to tagging and descriptions, Computer Vision API returns the taxonomy-based categories defined in previous versions. These categories are organized as a taxonomy with parent/child hereditary hierarchies. All categories are in English.They can be used alone or in combination with our new models.
 
-See [Image Categories](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/86categories) to view  all 86 categories. 
+###The 86-category concept
+Based on a list of 86 concepts seen in the below diagram, visual features found in an image can be categorized ranging from broad to specific. For the full taxonomy in text format, go here.
+
+See [Image Categories](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/86categories) to view  the 86 category taxonomy. 
 
 ##Identifying Image Types
 There are several ways to categorize images. Computer Vision API can set a boolean flag to indicate whether an image is black and white or color and use the same method to indicate whether an image is a line drawing or not. It can also indicate whether an image is clipart or not and indicate its quality as such on a scale of 0-3. 
@@ -31,11 +35,12 @@ In addition to tagging and top-level categorization, Computer Vision API also su
 Currently, the only specialized information supported is celebrity recognition, and it is essentially a domain-specific refinement for the people and people group categories. 
 
 There are two options for making use of the domain-specific models:
-Option One, also known as Scoped Analysis: Analyze only a chosen model, by invoking an HTTP POST call.
-For this option, if you know which model you want to use, you just specify the model’s name, and you only get information relevant to that model. For example, you can use this option to only look for celebrity-recognition; the response will contain a list of potential matching celebrities, accompanied by their confidence scores.
 
-Option Two, also known as Enhanced Analysis: Analyze to provide additional details related to categories from one of the 86-category taxonomy.
-This option is available for use in applications where users want to get generic image analysis in addition to details from one or more domain-specific models. When this method is invoked, the 86-category taxonomy classifier is called first. If any of the categories match that of known/matching models, a second pass of classifier invocations will follow. For example, if “details=all” or "details" include “celebrities”, the method will call the celebrity classifier after the 86-category classifier is called and the result includes “object_people_celebrities”. 
+###Option One - Scoped Analysis
+Analyze only a chosen model, by invoking an HTTP POST call. For this option, if you know which model you want to use, you just specify the model’s name, and you only get information relevant to that model. For example, you can use this option to only look for celebrity-recognition; the response will contain a list of potential matching celebrities, accompanied by their confidence scores.
+
+###Option Two - Enhanced Analysis
+Analyze to provide additional details related to categories from one of the 86-category taxonomy. This option is available for use in applications where users want to get generic image analysis in addition to details from one or more domain-specific models. When this method is invoked, the 86-category taxonomy classifier is called first. If any of the categories match that of known/matching models, a second pass of classifier invocations will follow. For example, if “details=all” or "details" include “celebrities”, the method will call the celebrity classifier after the 86-category classifier is called and the result includes “object_people_celebrities”. 
 
 ##Generating Descriptions
 Computer Vision API’s algorithms analyze the content found in an image, which in turn forms the foundation for a “description” displayed as human readable language in complete sentences. The description summarizes what is found in the image. More than one description will be generated for each image ordered by their confidence score as seen in below illustration.
