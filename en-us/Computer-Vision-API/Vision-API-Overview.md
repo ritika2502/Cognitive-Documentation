@@ -1,3 +1,4 @@
+
 #Computer Vision API Version 1.0
 
 Computer Vision cloud-based API provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Microsoft Computer Vision algorithms can analyze visual content in different ways based on inputs and user choices. With the Computer Vision API users can analyze images to:
@@ -17,6 +18,8 @@ Computer Vision API will also support specialized (or domain-specific) informati
  
 ##Categorizing Images
 In addition to tagging and descriptions, Computer Vision API returns the taxonomy-based categories defined in previous versions. These categories are organized as a taxonomy with parent/child hereditary hierarchies. All categories are in English.They can be used alone or in combination with our new models.
+
+See [Image Categories](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/86categories) to viewll 86 categories. 
 
 ##Identifying Image Types
 There are several ways to categorize images. Computer Vision API can set a boolean flag to indicate whether an image is black and white or color and use the same method to indicate whether an image is a line drawing or not. It can also indicate whether an image is clipart or not and indicate its quality as such on a scale of 0-3. 
