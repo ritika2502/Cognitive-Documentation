@@ -8,15 +8,14 @@ Computer Vision cloud-based API provides developers with access to advanced algo
 - Generate descriptions of the content. 
 - Use optical character recognition to identify text found in images.
 - Distinguish color schemes.
-- Flag adult content.
-- Detect human faces and return their coordinates in the image.   
+- Flag adult content.- Detect human faces and return their coordinates in the image.   
 - Crop photos to be used as thumbnails. 
 
 ##Tagging Images
 Computer Vision API returns tags based on more than 2000 recognizable objects, living beings, scenery, and actions. In cases where tags may be ambiguous or not common knowledge, the API response provides “hints” to clarify the meaning of the tag in context of a known setting. Tags are not organized as a taxonomy and no inheritance hierarchies exist. A collection of content tags forms the foundation for an image “description” displayed as human readable language formatted in complete sentences. Note, that at this point English is the only supported language for image description.
 
 Computer Vision API will also support specialized (or domain-specific) information. Specialized information can be implemented as a stand-alone method or in combination with the "analyze" method. Specialized information is a way to break down the 86-category taxonomy into domain-specific models. Right now, we only support celebrity-recognition as a domain-specific model, but more will be added soon! 
-
+ 
 ##Categorizing images
 In addition to tagging and descriptions, Computer Vision API returns the taxonomy-based categories defined in previous versions. These categories are organized as a taxonomy with parent/child hereditary hierarchies. All categories are in English.They can be used alone or in combination with our new models.
 
@@ -35,9 +34,33 @@ The Computer Vision algorithm extracts colors from an image. The colors are anal
 ##Flagging Adult Content
 Among the various visual categories is the adult and racy group, which enables detection of pornographic materials and restricts the display of images containing sexual content. The filter for adult and racy content detection can be set on a sliding scale to accommodate the user’s preference.
 
-##Detecting faces
+##Detecting Faces
 Computer Vision API detects human faces within a picture and generates face coordinates, draws the bounding box around the face, indicates gender and age. These visual features are a subset of metadata generated for Face API. For more extensive metadata generated for faces, such as facial identification, pose detection, and more, use the Face API.
 
+##Optical Character Rrcognition (OCR)
+OCR technology detects text content in an image and subsequently extracts the identified text into a machine-readable character stream used for search and numerous other purposes ranging from medical records to security and banking. It automatically detects the language. OCR saves time and provides convenience for users by allowing them to simply take photos of text instead of transcribing text. 
+
+The 21 languages supported by OCR are Chinese Simplified, Chinese Traditional, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, and Turkish. 
+
+If needed, OCR corrects the rotation of the recognized text, in degrees, around the horizontal image axis. OCR provides the frame coordinates of each word as seen in below illustration.
+![OCR Overview](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/vision-overview-ocr.png)
+
+Requirements for OCR:
+-The size of the input image must be between 40 x 40 and 32000 x 32000 pixels. 
+-The image cannot be bigger than 100 megapixels.
+
+Input image can be rotated by any multiple of 90 degrees plus a small angle of up to ±40 degrees.
+
+The accuracy of text recognition depends on the quality of the image. An inaccurate reading may be caused by the following: 
+-Blurry images
+-Handwritten or cursive text
+-Artistic font styles
+-Small text size
+-Complex backgrounds, shadows or glare over text or perspective distortion
+-Oversized or missing capital letters at the beginnings of words
+-Subscript, superscript, or strikethrough text
+
+Limitations: On photos where text is dominant, false positives may come from partially recognized words. On some photos, especially photos without any text, precision can vary a lot depending on the type of image.
 
 
 ##Quick Start...
