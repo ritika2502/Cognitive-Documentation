@@ -83,6 +83,7 @@ Image                                           | Response
 There are several ways to categorize images. Computer Vision API can set a boolean flag to indicate whether an image is black and white or color and use the same method to indicate whether an image is a line drawing or not. It can also indicate whether an image is clipart or not and indicate its quality as such on a scale of 0-3. 
 
 ##Recognizing Domain-Specific Content: Celebrities Model
+
 In addition to tagging and top-level categorization, Computer Vision API also supports specialized (or domain-specific) information. Specialized information can be implemented as a standalone method or in combination with the high level categorization. It functions as a means to further refine the 86-category taxonomy through the addition of domain-specific models.
 
 Currently, the only specialized information supported is celebrity recognition, and it is essentially a domain-specific refinement for the people and people group categories. 
@@ -96,7 +97,52 @@ Analyze only a chosen model, by invoking an HTTP POST call. For this option, if 
 Analyze to provide additional details related to categories from one of the 86-category taxonomy. This option is available for use in applications where users want to get generic image analysis in addition to details from one or more domain-specific models. When this method is invoked, the 86-category taxonomy classifier is called first. If any of the categories match that of known/matching models, a second pass of classifier invocations will follow. For example, if “details=all” or "details" include “celebrities”, the method will call the celebrity classifier after the 86-category classifier is called and the result includes “object_people_celebrities”. 
 
 ##Generating Descriptions
-Computer Vision API’s algorithms analyze the content found in an image, which in turn forms the foundation for a “description” displayed as human readable language in complete sentences. The description summarizes what is found in the image. More than one description will be generated for each image ordered by their confidence score as seen in below illustration.
+Computer Vision API’s algorithms analyze the content found in an image, which in turn forms the foundation for a “description” displayed as human readable language in complete sentences. The description summarizes what is found in the image. More than one description will be generated for each image ordered by their confidence score as seen in below illustration. 
+After uploading an image or specifying an image URL, Computer Vision API’s algorithms generate a number of descriptions based on the objects identified in the image. The descriptions are each evaluated and a confidence score generated. A list is then returned ordered from highest confidence score to lowest.
+
+###Example
+![B&W Buildings](./bw_buildings.jpg)  
+
+```
+Returned Json 
+
+ “description”: 
+{
+    "captions": 
+
+[
+{
+"type": "phrase",
+“text”: “a black and white photo of a large city”,
+          “confidence”: 0.607638706850331
+}
+]
+"captions": 
+[
+{
+"type": "phrase",
+“text”: “a photo of a large city”,
+          “confidence”: 0.577256764264197
+    }
+]
+"captions": 
+[
+{
+"type": "phrase",
+“text”: “a black and white photo of a city”,
+          “confidence”: 0.538493271791207
+}
+]
+
+“description”: 
+[
+"tags": 
+{
+      "outdoor", "city", "building", "photo", "large", 
+}
+]
+}
+```
 
 ##Perceiving Color Schemes
 The Computer Vision algorithm extracts colors from an image. The colors are analyzed in three different contexts, foreground, background, and whole, and colors are grouped into twelve 12 dominant accent colors (black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow). Depending on the colors in an image, simple black and white or accent colors may be returned in hexadecimal color codes.
