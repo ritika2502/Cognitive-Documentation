@@ -23,7 +23,7 @@ In addition to tagging and descriptions, Computer Vision API returns the taxonom
 ###The 86-category concept
 Based on a list of 86 concepts seen in the below diagram, visual features found in an image can be categorized ranging from broad to specific. For the full taxonomy in text format, see [Image Categories](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/86categories). 
 
-![Analyze Categories](./Images/analyze_categories.jpg)  
+![Analyze Categories](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/analyze_categories.jpg)  
 
 Image                                                  | Response
 ------------------------------------------------------ | ----------------
