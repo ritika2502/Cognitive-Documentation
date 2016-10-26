@@ -22,7 +22,7 @@ After uploading an image or specifying an image URL, Computer Vision API’s alg
 - Image dimension: Greater than 50 x 50 pixels.
 
 ###Example
-![House_Yard](./house_yard.jpg)  
+![House_Yard](./Images/house_yard.jpg)  
 
 ``` 
 Returned Json
@@ -69,15 +69,15 @@ In addition to tagging and descriptions, Computer Vision API returns the taxonom
 ###The 86-category concept
 Based on a list of 86 concepts seen in the below diagram, visual features found in an image can be categorized ranging from broad to specific. For the full taxonomy in text format, see [Image Categories](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/86categories). 
 
-![Analyze Categories](./analyze_categories.jpg)  
+![Analyze Categories](./Images/analyze_categories.jpg)  
 
-Image                                           | Response
------------------------------------------------ | ----------------
-![Woman Roof](./woman_roof.jpg)                 | people
-![Family Photo](./family_photo.jpg)             | people_crowd
-![Cute Dog](./cute_dog.jpg)                     | animal_dog
-![Outdoor Mountain](./mountain_vista.jpg)       | outdoor_mountain
-![Vision Analyze Food Bread](./bread.jpg)       | food_bread
+Image                                                  | Response
+------------------------------------------------------ | ----------------
+![Woman Roof](./Images/woman_roof.jpg)                 | people
+![Family Photo](./Images/family_photo.jpg)             | people_crowd
+![Cute Dog](./Images/cute_dog.jpg)                     | animal_dog
+![Outdoor Mountain](./Images/mountain_vista.jpg)       | outdoor_mountain
+![Vision Analyze Food Bread](./Images/bread.jpg)       | food_bread
 
 ##Identifying Image Types
 There are several ways to categorize images. Computer Vision API can set a boolean flag to indicate whether an image is black and white or color and use the same method to indicate whether an image is a line drawing or not. It can also indicate whether an image is clipart or not and indicate its quality as such on a scale of 0-3. 
@@ -90,7 +90,6 @@ Currently, the only specialized information supported is celebrity recognition, 
 
 There are two options for making use of the domain-specific models:
 
-
 ###Option One - Scoped Analysis
 Analyze only a chosen model, by invoking an HTTP POST call. For this option, if you know which model you want to use, you just specify the model’s name, and you only get information relevant to that model. For example, you can use this option to only look for celebrity-recognition; the response will contain a list of potential matching celebrities, accompanied by their confidence scores.
 
@@ -102,7 +101,7 @@ Computer Vision API’s algorithms analyze the content found in an image, which 
 After uploading an image or specifying an image URL, Computer Vision API’s algorithms generate a number of descriptions based on the objects identified in the image. The descriptions are each evaluated and a confidence score generated. A list is then returned ordered from highest confidence score to lowest.
 
 ###Example
-![B&W Buildings](./bw_buildings.jpg)  
+![B&W Buildings](./Images/bw_buildings.jpg)  
 
 ```
 Returned Json 
@@ -144,23 +143,6 @@ a[
  }
 ```
 
-{
-m"type": "phrase",
-“text”: “a black and white photo of a city”,
-          “confidence”: 0.538493271791207
-}
-]
-
-“description”: 
-[
-"tags": 
-{
-      "outdoor", "city", "building", "photo", "large", 
-}
-]
- }
-```
-
 ##Perceiving Color Schemes
 The Computer Vision algorithm extracts colors from an image. The colors are analyzed in three different contexts, foreground, background, and whole, and colors are grouped into twelve 12 dominant accent colors (black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow). Depending on the colors in an image, simple black and white or accent colors may be returned in hexadecimal color codes.
 
@@ -177,7 +159,7 @@ The 21 languages supported by OCR are Chinese Simplified, Chinese Traditional, C
 
 If needed, OCR corrects the rotation of the recognized text, in degrees, around the horizontal image axis. OCR provides the frame coordinates of each word as seen in below illustration.
 
-![OCR Overview](./Ivision-overview-ocr.png)
+![OCR Overview](./Images/Ivision-overview-ocr.png)
 Requirements for OCR:
 - The size of the input image must be between 40 x 40 and 32000 x 32000 pixels. 
 - The image cannot be bigger than 100 megapixels.
