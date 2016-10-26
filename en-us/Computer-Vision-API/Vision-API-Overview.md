@@ -3,11 +3,12 @@
 Computer Vision cloud-based API provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Microsoft Computer Vision algorithms can analyze visual content in different ways based on inputs and user choices. With the Computer Vision API users can analyze images to:
 - Tag images based on content.
 - Categorize images.
- - Identify the type and quality of images. 
+- Identify the type and quality of images. 
 - Recognize domain specific content (celebrities model).
 - Generate descriptions of the content. 
 - Use optical character recognition to identify text found in images.- Distinguish color schemes.
-- Flag adult content.- Detect human faces and return their coordinates in the image.   
+- Flag adult content.
+- Detect human faces and return their coordinates in the image.   
 - Crop photos to be used as thumbnails. 
 
 ##Tagging Images
@@ -22,7 +23,6 @@ See [Image Categories](https://www.microsoft.com/cognitive-services/en-us/Comput
 
 ##Identifying Image Types
 There are several ways to categorize images. Computer Vision API can set a boolean flag to indicate whether an image is black and white or color and use the same method to indicate whether an image is a line drawing or not. It can also indicate whether an image is clipart or not and indicate its quality as such on a scale of 0-3. 
-
 
 ##Recognizing Domain-Specific Content: Celebrities Model
 A new domain-specific model has been added to Computer Vision API, in this case a model that recognizes celebrities in your images. It can be implemented as a stand-alone method or in combination with the top-level image categorization. 
