@@ -1,4 +1,4 @@
-#Computer Vision API Version 1.0
+Computer Vision API Version 1.0
 
 Computer Vision cloud-based API provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Microsoft Computer Vision algorithms can analyze visual content in different ways based on inputs and user choices. With the Computer Vision API users can analyze images to:
 - Tag images based on content.
@@ -23,7 +23,7 @@ In addition to tagging and descriptions, Computer Vision API returns the taxonom
 ###The 86-category concept
 Based on a list of 86 concepts seen in the below diagram, visual features found in an image can be categorized ranging from broad to specific. For the full taxonomy in text format, see [Image Categories](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/86categories). 
 
-![Analyze Categories](https://github.com/Microsoft/Cognitive-Documentation/blob/readme-edits/en-us/Computer-Vision-API/analyze_categories.jpg)  
+![Analyze Categories](./analyze_categories.jpg)  
 
 Image                                                  | Response
 ------------------------------------------------------ | ----------------
