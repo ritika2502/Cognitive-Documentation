@@ -1,3 +1,4 @@
+
 #Computer Vision API Version 1.0
 
 Computer Vision cloud-based API provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Microsoft Computer Vision algorithms can analyze visual content in different ways based on inputs and user choices. With the Computer Vision API users can analyze images to:
@@ -6,7 +7,8 @@ Computer Vision cloud-based API provides developers with access to advanced algo
 - Identify the type and quality of images. 
 - Recognize domain specific content (celebrities model).
 - Generate descriptions of the content. 
-- Use optical character recognition to identify text found in images.- Distinguish color schemes.
+- Use optical character recognition to identify text found in images.
+- Distinguish color schemes.
 - Flag adult content.
 - Detect human faces and return their coordinates in the image.   
 - Crop photos to be used as thumbnails. 
@@ -67,7 +69,9 @@ Limitations: On photos where text is dominant, false positives may come from par
 
 ##Generating Thumbnails
 A thumbnail is a small representation of a full-size image. Varied devices such as phones, tablets, and PCs create a need for different user experience (UX) layouts and thumbnail sizes. Using smart cropping, this Computer Vision API feature helps solve the problem.
+
 After uploading an image, a high quality thumbnail gets generated and the Computer Vision API algorithm analyzes the objects within the image, then crops it to fit the requirements of the “region of interest” (ROI). The output gets displayed within a special framework as seen in below illustration. The generated thumbnail can be presented in a different aspect ratio than that of the original image to accommodate a user’s needs.
+
 The thumbnail algorithm works as follows:
 1.Removes distracting elements from the image and recognizes the main object, the “region of interest” (ROI).
 2.Crops the image based on identified “region of interest”.
