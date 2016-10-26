@@ -22,7 +22,7 @@ After uploading an image or specifying an image URL, Computer Vision API’s alg
 - Image dimension: Greater than 50 x 50 pixels.
 
 ###Example
-![House_Yard](./House_Yard.jpg)  
+![House_Yard](./house_yard.jpg)  
 
 ``` 
 Returned Json
