@@ -12,14 +12,16 @@ Computer Vision cloud-based API provides developers with access to advanced algo
 - Detect human faces and return their coordinates in the image.   
 - Crop photos to be used as thumbnails. 
 
-##Tagging Images
-Computer Vision API returns tags based on more than 2000 recognizable objects, living beings, scenery, and actions. In cases where tags may be ambiguous or not common knowledge, the API response provides “hints” to clarify the meaning of the tag in context of a known setting. Tags are not organized as a taxonomy and no inheritance hierarchies exist. A collection of content tags forms the foundation for an image “description” displayed as human readable language formatted in complete sentences. Note, that at this point English is the only supported language for image description.
-
-After uploading an image or specifying an image URL, Computer Vision API’s algorithms output a number of tags based on the objects, living beings and actions identified in the image. Tagging is not limited to the main subject, such as a person in the foreground, but also includes the setting (indoor or outdoor), furniture, tools, plants, animals, accessories, gadgets etc. 
+###Requirements
 - Supported input methods: Raw image binary in the form of an application/octet stream or image URL.
 - Supported image formats: JPEG, PNG, GIF, BMP.
 - Image file size: Less than 4MB.
 - Image dimension: Greater than 50 x 50 pixels.
+
+##Tagging Images
+Computer Vision API returns tags based on more than 2000 recognizable objects, living beings, scenery, and actions. In cases where tags may be ambiguous or not common knowledge, the API response provides “hints” to clarify the meaning of the tag in context of a known setting. Tags are not organized as a taxonomy and no inheritance hierarchies exist. A collection of content tags forms the foundation for an image “description” displayed as human readable language formatted in complete sentences. Note, that at this point English is the only supported language for image description.
+
+After uploading an image or specifying an image URL, Computer Vision API’s algorithms output a number of tags based on the objects, living beings and actions identified in the image. Tagging is not limited to the main subject, such as a person in the foreground, but also includes the setting (indoor or outdoor), furniture, tools, plants, animals, accessories, gadgets etc. 
 
 ###Example
 ![House_Yard](./Images/house_yard.jpg)  
@@ -113,8 +115,7 @@ Returned Json
 {
 "type": "phrase",
 “text”: “a black and white photo of a large city”,
-          “confidence”: 0.607638706850331
-}
+          “confidence”: 0.607638706850331}
 ]
 "captions": 
 [
@@ -159,7 +160,7 @@ The 21 languages supported by OCR are Chinese Simplified, Chinese Traditional, C
 
 If needed, OCR corrects the rotation of the recognized text, in degrees, around the horizontal image axis. OCR provides the frame coordinates of each word as seen in below illustration.
 
-![OCR Overview](./Images/Ivision-overview-ocr.png)
+![OCR Overview](./Images/vision-overview-ocr.png)
 Requirements for OCR:
 - The size of the input image must be between 40 x 40 and 32000 x 32000 pixels. 
 - The image cannot be bigger than 100 megapixels.
@@ -180,8 +181,6 @@ Limitations: On photos where text is dominant, false positives may come from par
 - Complex backgrounds, shadows or glare over text or perspective distortion
 - Oversized or missing capital letters at the beginnings of words
 - Subscript, superscript, or strikethrough text
-
-Limitations: On photos where text is dominant, false positives may come from partially recognized words. On some photos, especially photos without any text, precision can vary a lot depending on the type of image.
 
 ##Generating Thumbnails
 A thumbnail is a small representation of a full-size image. Varied devices such as phones, tablets, and PCs create a need for different user experience (UX) layouts and thumbnail sizes. Using smart cropping, this Computer Vision API feature helps solve the problem.
