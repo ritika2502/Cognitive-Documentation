@@ -84,6 +84,39 @@ Image                                                  | Res
 ##Identifying Image Types
 There are several ways to categorize images. Computer Vision API can set a boolean flag to indicate whether an image is black and white or color and use the same method to indicate whether an image is a line drawing or not. It can also indicate whether an image is clipart or not and indicate its quality as such on a scale of 0-3. 
 
+### Clipart type
+Detects whether an image is clipart or not.  
+
+Value | Meaning
+----- | --------------
+0     | Non-clipart
+1     | ambiguous
+2     | normal-clipart
+3     | good-clipart
+
+Image|Response
+----|----
+![Vision Analyze Cheese Clipart](./Images/cheese_clipart.jpg)|3 good-clipart
+![Vision Analyze House Yard](./Images/house_yard.jpg)|0 Non-clipart
+
+### Line drawing type
+Detects whether an image is a line drawing or not.  
+
+Image|Response
+----|----
+![Vision Analyze Lion Drawing](./Images/lion_drawing.jpg)|True
+![Vision Analyze Flower](./Images/flower.jpg)|False
+
+### Faces
+Detects human faces within a picture and generates the face coordinates, the rectangle for the face, gender, and age. These visual features are a subset of metadata generated for face. For more extensive metadata generated for faces (facial identification, pose detection, and more), use the Face API.  
+
+Image|Response
+----|----
+![Vision Analyze Woman Roof Face](./Images/woman_roof_face.png) | [ { "age": 23, "gender": "Female", "faceRectangle": { "left": 1379, "top": 320, "width": 310, "height": 310 } } ]
+![Vision Analyze Mom Daughter Face](./Images/mom_daughter_face.png) | [ { "age": 28, "gender": "Female", "faceRectangle": { "left": 447, "top": 195, "width": 162, "height": 162 } }, { "age": 10, "gender": "Male", "faceRectangle": { "left": 355, "top": 87, "width": 143, "height": 143 } } ] 
+![Vision Analyze Family Phot Face](./Images/family_photo_face.png) | [ { "age": 11, "gender": "Male", "faceRectangle": { "left": 113, "top": 314, "width": 222, "height": 222 } }, { "age": 11, "gender": "Female", "faceRectangle": { "left": 1200, "top": 632, "width": 215, "height": 215 } }, { "age": 41, "gender": "Male", "faceRectangle": { "left": 514, "top": 223, "width": 205, "height": 205 } }, { "age": 37, "gender": "Female", "faceRectangle": { "left": 1008, "top": 277, "width": 201, "height": 201 } } ] 
+
+
 ##Recognizing Domain-Specific Content: Celebrities Model
 
 In addition to tagging and top-level categorization, Computer Vision API also supports specialized (or domain-specific) information. Specialized information can be implemented as a standalone method or in combination with the high level categorization. It functions as a means to further refine the 86-category taxonomy through the addition of domain-specific models.
@@ -106,7 +139,7 @@ After uploading an image or specifying an image URL, Computer Vision API’s alg
 ![B&W Buildings](./Images/bw_buildings.jpg)  
 
 ```
-Returned Json 
+ Returned Json 
 
  “description”: 
 {
@@ -121,10 +154,11 @@ Returned Json
 [
 {
 "type": "phrase",
-“text”: “a photo of a large city”,          “confidence”: 0.577256764264197
+“text”: “a photo of a large city”,
+           “confidence”: 0.577256764264197
     }
 ]
-g"captions": 
+"captions": 
 [
 {
 "type": "phrase",
@@ -134,9 +168,8 @@ g"captions":
 ]
 
 “description”: 
-a[
+[
 "tags": 
-
 {
       "outdoor", "city", "building", "photo", "large", 
 }
@@ -145,13 +178,32 @@ a[
 ```
 
 ##Perceiving Color Schemes
-The Computer Vision algorithm extracts colors from an image. The colors are analyzed in three different contexts, foreground, background, and whole, and colors are grouped into twelve 12 dominant accent colors (black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow). Depending on the colors in an image, simple black and white or accent colors may be returned in hexadecimal color codes.
+The Computer Vision algorithm extracts colors from an image. The colors are analyzed in three different contexts, foreground, background, and whole, and colors are grouped into twelve 12 dominant accent colors (black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow). Depending on the colors in an image, simple black and white or accent colors may be returned in hexadecimal color codes. 
+  
+Image                                                       | Foregroud |Backgroud| Colors
+----------------------------------------------------------- | --------- | ------- | ------
+![Outdoor Mountain](./Images/mountain_vista.jpg)            | Black     | Black   | White
+![Vision Analyze Flower](./Images/flower.jpg)               | Black     | White   | White,Black,Green
+![Vision Analyze Train Station](./Images/train_station.jpg) | Black     | Black   | Black
+
+### Accent color
+Color extracted from an image designed to represent the most eye-popping color to users via a mix of dominant colors and saturation.  
+
+Image                                                                                 | Response
+------------------------------------------------------------------------------------- | ----
+![Outdoor Mountain](./Images/mountain_vista.jpg)                             | #BC6F0F
+![Vision Analyze Flower](./Images/flower.jpg)                | #CAA501
+![Vision Analyze Train Station](./Images/train_station.jpg) | #484B83
+
+### Black & White
+Boolean flag that indicates whether an image is black&white or not.  
+Image                                                                                 | Response
+------------------------------------------------------------------------------------ | ----
+![Vision Analyze Building](./Images/bw_buildings.jpg)             | True
+![Vision Analyze House Yard](./Images/house_yard.jpg)       | False
 
 ##Flagging Adult Content
  Among the various visual categories is the adult and racy group, which enables detection of pornographic materials and restricts the display of images containing sexual content. The filter for adult and racy content detection can be set on a sliding scale to accommodate the user’s preference.
-
-##Detecting Faces
-Computer Vision API detects human faces within a picture and generates face coordinates, draws the bounding box around the face, indicates gender and age. These visual features are a subset of metadata generated for Face API. For more extensive metadata generated for faces, such as facial identification, pose detection, and more, use the Face API.
 
 ##Optical Character Rrcognition (OCR)
 OCR technology detects text content in an image and subsequently extracts the identified text into a machine-readable character stream used for search and numerous other purposes ranging from medical records to security and banking. It automatically detects the language. OCR saves time and provides convenience for users by allowing them to simply take photos of text instead of transcribing text. 
