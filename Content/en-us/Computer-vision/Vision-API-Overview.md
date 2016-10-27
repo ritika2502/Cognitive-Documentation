@@ -26,7 +26,7 @@ After uploading an image or specifying an image URL, Computer Vision API’s alg
 ###Example
 ![House_Yard](./Images/house_yard.jpg)  
 
-``` 
+```Json 
 Returned Json
 {
 “tags”: [
