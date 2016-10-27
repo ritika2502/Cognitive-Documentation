@@ -196,9 +196,9 @@ Image                                                       | Response
 ![Vision Analyze Train Station](./Images/train_station.jpg) | #484B83
 
 ### Black & White
-Boolean flag that indicates whether an image is black&white or not.  
-Image                                                      | Response
----------------------------------------------------------- | ----
+Boolean flag that indicates whether an image is black&white or not. 
+Image                                                       | Response
+----------------------------------------------------------- | ----
 ![Vision Analyze Building](./Images/bw_buildings.jpg)      | True
 ![Vision Analyze House Yard](./Images/house_yard.jpg)      | False
 
