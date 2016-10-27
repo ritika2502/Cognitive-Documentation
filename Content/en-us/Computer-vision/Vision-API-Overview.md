@@ -170,6 +170,7 @@ After uploading an image or specifying an image URL, Computer Vision API’s alg
 "tags": 
 {
       "outdoor", "city", "building", "photo", "large", 
+
 }
 ]
  }
@@ -185,7 +186,8 @@ Image                                                       | Foregroud |Backgro
 ![Vision Analyze Train Station](./Images/train_station.jpg) | Black     | Black   | Black
 
 ### Accent color
-Color extracted from an image designed to represent the most eye-popping color to users via a mix of dominant colors and saturation.  
+Color extracted from an image designed to represent the most eye-popping color to users via a mix of dominant colors and saturation.
+
 Image                                                       | Response
 ----------------------------------------------------------- | ----
 ![Outdoor Mountain](./Images/mountain_vista.jpg)            | #BC6F0F
