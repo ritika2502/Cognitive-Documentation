@@ -194,6 +194,7 @@ Image                                                       | Response
 ![Vision Analyze Flower](./Images/flower.jpg)               | #CAA501
 ![Vision Analyze Train Station](./Images/train_station.jpg) | #484B83
 
+
 ### Black & White
 Boolean flag that indicates whether an image is black&white or not.
 
@@ -240,6 +241,7 @@ A thumbnail is a small representation of a full-size image. Varied devices such 
 After uploading an image, a high quality thumbnail gets generated and the Computer Vision API algorithm analyzes the objects within the image, then crops it to fit the requirements of the “region of interest” (ROI). The output gets displayed within a special framework as seen in below illustration. The generated thumbnail can be presented in a different aspect ratio than that of the original image to accommodate a user’s needs.
 
 The thumbnail algorithm works as follows:
+
 1. Removes distracting elements from the image and recognizes the main object, the “region of interest” (ROI).
 2. Crops the image based on identified “region of interest”.
 3. Changes the aspect ratio to fit the target thumbnail dimensions.
