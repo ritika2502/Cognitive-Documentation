@@ -166,7 +166,6 @@ After uploading an image or specifying an image URL, Computer Vision API’s alg
           “confidence”: 0.538493271791207
 }
 ]
-
 “description”: 
 [
 "tags": 
@@ -196,7 +195,8 @@ Image                                                       | Response
 ![Vision Analyze Train Station](./Images/train_station.jpg) | #484B83
 
 ### Black & White
-Boolean flag that indicates whether an image is black&white or not. 
+Boolean flag that indicates whether an image is black&white or not.
+
 Image                                                       | Response
 ----------------------------------------------------------- | ----
 ![Vision Analyze Building](./Images/bw_buildings.jpg)      | True
