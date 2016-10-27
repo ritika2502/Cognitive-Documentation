@@ -6,7 +6,7 @@ The cloud-based Computer Vision API provides developers with access to advanced 
 * [Identify the type and quality of images.](#Identifying) 
 * [Detect human faces and return their coordinates. ](#Faces) 
 * [Recognize domain-specific content.](#Domain-Specific)
-* [Generate descriptions of the content.](#Description)
+* [Generate descriptions of the content.](#Descriptions)
 * [Use optical character recognition to identify text found in images.](#OCR)
 * [Distinguish color schemes.](#Color)
 * [Flag adult content.](#Adult)
@@ -72,7 +72,6 @@ In addition to tagging and descriptions, Computer Vision API returns the taxonom
 Based on a list of 86 concepts seen in the below diagram, visual features found in an image can be categorized ranging from broad to specific. For the full taxonomy in text format, see [Image Categories](https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/Images/86categories). 
 
 ![Analyze Categories](./Images/analyze_categories.jpg)  
-
 Image                                                  | Response
 ------------------------------------------------------ | ----------------
 ![Woman Roof](./Images/woman_roof.jpg)                 | people
@@ -107,7 +106,7 @@ Image|Response
 ![Vision Analyze Lion Drawing](./Images/lion_drawing.jpg)|True
 ![Vision Analyze Flower](./Images/flower.jpg)|False
 
-### Faces
+###<a name="Faces">Faces</a> 
 Detects human faces within a picture and generates the face coordinates, the rectangle for the face, gender, and age. These visual features are a subset of metadata generated for face. For more extensive metadata generated for faces (facial identification, pose detection, and more), use the Face API.  
 
 Image|Response
