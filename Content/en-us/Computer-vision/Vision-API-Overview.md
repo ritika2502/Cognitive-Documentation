@@ -1,15 +1,15 @@
-#Computer Vision API Version 1.0
+- Detect human faces and return their coordinates in the image. #Computer Vision API Version 1.0
 
-Computer Vision cloud-based API provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Microsoft Computer Vision algorithms can analyze visual content in different ways based on inputs and user choices. With the Computer Vision API users can analyze images to:
+The cloud-based Computer Vision API provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Microsoft Computer Vision algorithms can analyze visual content in different ways based on inputs and user choices. With the Computer Vision API users can analyze images to:
 - Tag images based on content.
 - Categorize images.
-- Identify the type and quality of images. 
+- Identify the type and quality of images.
+- Detect human faces and return their coordinates. 
 - Recognize domain specific content.
 - Generate descriptions of the content. 
 - Use optical character recognition to identify text found in images.
 - Distinguish color schemes.
 - Flag adult content.
-- Detect human faces and return their coordinates in the image.   
 - Crop photos to be used as thumbnails. 
 
 ###Requirements
@@ -189,18 +189,18 @@ Image                                                       | Foregroud |Backgro
 ### Accent color
 Color extracted from an image designed to represent the most eye-popping color to users via a mix of dominant colors and saturation.  
 
-Image                                                                                 | Response
-------------------------------------------------------------------------------------- | ----
-![Outdoor Mountain](./Images/mountain_vista.jpg)                             | #BC6F0F
-![Vision Analyze Flower](./Images/flower.jpg)                | #CAA501
+Image                                                       | Response
+----------------------------------------------------------- | ----
+![Outdoor Mountain](./Images/mountain_vista.jpg)            | #BC6F0F
+![Vision Analyze Flower](./Images/flower.jpg)               | #CAA501
 ![Vision Analyze Train Station](./Images/train_station.jpg) | #484B83
 
 ### Black & White
 Boolean flag that indicates whether an image is black&white or not.  
-Image                                                                                 | Response
------------------------------------------------------------------------------------- | ----
-![Vision Analyze Building](./Images/bw_buildings.jpg)             | True
-![Vision Analyze House Yard](./Images/house_yard.jpg)       | False
+Image                                                      | Response
+---------------------------------------------------------- | ----
+![Vision Analyze Building](./Images/bw_buildings.jpg)      | True
+![Vision Analyze House Yard](./Images/house_yard.jpg)      | False
 
 ##Flagging Adult Content
  Among the various visual categories is the adult and racy group, which enables detection of pornographic materials and restricts the display of images containing sexual content. The filter for adult and racy content detection can be set on a sliding scale to accommodate the user’s preference.
